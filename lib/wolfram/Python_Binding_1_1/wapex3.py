@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import os
 import wap
 
 server = 'http://api.wolframalpha.com/v2/query.jsp'
-appid = 'XXXX'
+appid = os.environ['WOLFRAM_KEY']
 input = 'pi'
+
+print(appid)
 
 waeo = wap.WolframAlphaEngine(appid, server)
 
